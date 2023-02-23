@@ -29,8 +29,8 @@ class Host:
 
 def check_exist_file_hosts():
     if path.isfile(FILE_PATH) == False:
-        creater = open(FILE_PATH, "w")
-        creater.close()
+        with open(FILE_PATH, "w") as file:
+            file.write("Google - 8.8.8.8")
 
 #--------------- Open file and return dict with host and it's ip
 
